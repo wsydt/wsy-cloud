@@ -2,14 +2,14 @@ package com.wsy.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
-@EnableDiscoveryClient
-public class OrderServiceMain80 {
+@EnableEurekaServer
+public class EurekaServeMain7002 {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderServiceMain80.class, args);
+        SpringApplication.run(EurekaServeMain7002.class, args);
     }
 
 }
