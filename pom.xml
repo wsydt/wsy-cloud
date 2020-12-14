@@ -17,8 +17,10 @@
 
     <modules>
         <module>eureka-serve-7001</module>
+        <module>eureka-serve-7002</module>
         <module>payment-service-8001</module>
         <module>order-service-80</module>
+        <module>payment-service-8002</module>
     </modules>
     
     <dependencies>

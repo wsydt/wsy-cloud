@@ -2,12 +2,12 @@ server:
   port: 7001
 spring:
   application:
-    name: eureka-serve-7001
+    name: eureka-server-7001
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:7002/eureka/
+      defaultZone: http://eureka-server-7002:7002/eureka/
   instance:
     hostname: ${spring.application.name}

@@ -1,6 +1,5 @@
 package com.wsy.springcloud.controller;
 
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,13 +10,14 @@ import javax.annotation.Resource;
 @RestController
 public class OrderController {
 
+    private String paymentUrl = "http://PAYMENT-SERVICE";
+
     @Resource
-//    @LoadBalanced
     private RestTemplate restTemplate;
 
     @GetMapping("/order/{price}")
     public String order(@PathVariable Integer price) {
-        String response = restTemplate.getForObject("http://localhost:8001/pay/" + price, String.class);
+        String response = restTemplate.getForObject(paymentUrl + "/pay/" + price, String.class);
         System.out.println("response : ------------" + response);
         return response;
     }
