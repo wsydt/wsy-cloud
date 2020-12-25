@@ -13,7 +13,9 @@ public class PaymentController {
 
     @GetMapping("/pay/{price}")
     public String pay(@PathVariable Integer price) {
-        return "pay " + price + "$ success, port : " + port;
+        String result = "pay " + price + "$ success, port : " + port;
+        System.out.println(result);
+        return result;
     }
 
 }

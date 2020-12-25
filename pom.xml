@@ -21,6 +21,9 @@
         <module>payment-service-8001</module>
         <module>order-service-80</module>
         <module>payment-service-8002</module>
+        <module>order-service-feign-10080</module>
+        <module>payment-service-hystrix-8111</module>
+        <module>order-service-hystrix-10080</module>
     </modules>
     
     <dependencies>
