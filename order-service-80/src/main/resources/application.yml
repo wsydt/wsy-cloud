@@ -4,6 +4,9 @@ server:
 spring:
   application:
     name: order-service-${server.port}
+  cloud:
+    config:
+      name: config-server
 
 eureka:
   client:

@@ -24,6 +24,7 @@
         <module>order-service-feign-10080</module>
         <module>payment-service-hystrix-8111</module>
         <module>order-service-hystrix-10080</module>
+        <module>config-service-8888</module>
     </modules>
     
     <dependencies>

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wsydt/springcloud-config
+server:
+  port: 8888
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server-7001:7001/eureka/, http://eureka-server-7002:7002/eureka/
