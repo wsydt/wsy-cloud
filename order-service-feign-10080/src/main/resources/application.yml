@@ -1,11 +1,21 @@
 server:
-  port: 10080
+  port: 10081
 
 spring:
   application:
-    name: order-service-${server.port}
-
+    name: order-service
+  cloud:
+    config:
+      name: order-config
+      profile: uat
+      label: uat
+      uri: http://localhost:8888/
 eureka:
   client:
     service-url:
       defaultZone: http://eureka-server-7001:7001/eureka/, http://eureka-server-7002:7002/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
