@@ -5,6 +5,8 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
 @RestController
 @RefreshScope
 public class ConfigController {
@@ -13,8 +15,9 @@ public class ConfigController {
     private String info;
 
     @GetMapping("config/getInfo")
-    public String getConfigInfo(){
+    public String getConfigInfo(HttpServletRequest request){
         System.out.println(info);
+        System.out.println(request);
         return info;
     }
 
